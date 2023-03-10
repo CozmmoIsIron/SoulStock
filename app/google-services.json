@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "704737966643",
+    "project_id": "solestock-f7394",
+    "storage_bucket": "solestock-f7394.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704737966643:android:e1b2f90a713332e9660146",
+        "android_client_info": {
+          "package_name": "com.example.solestock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704737966643-jh8i4mml94q9li718i8mesbc37jvnmr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM_2AJ3XtXhPcH9IJFZxGPC4BJ43YQ5Nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704737966643-jh8i4mml94q9li718i8mesbc37jvnmr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
