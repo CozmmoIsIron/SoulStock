@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventoryActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="90dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_layout" />
+
+    <Button
+        android:id="@+id/buttonadd"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_input_add"
+        android:text="Add +"
+        android:background="@drawable/button_bg"
+        android:tint="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/buttondelete"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/button_bg"
+        android:src="@android:drawable/ic_input_add"
+        android:text="Delete -"
+        android:tint="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

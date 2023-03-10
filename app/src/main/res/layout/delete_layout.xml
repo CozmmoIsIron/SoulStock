@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/et_Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Service"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"/>
+
+
+
+
+    <EditText
+        android:id="@+id/delete_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Activity Name"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:minHeight="48dp" />
+
+
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DElete " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
