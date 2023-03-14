@@ -7,7 +7,7 @@ public class User {
     public User(){
 
     }
-    public User(String CompanyName,String email,){
+    public User(String CompanyName,String email){
         this.CompanyName=CompanyName;
         this.email=email;
 

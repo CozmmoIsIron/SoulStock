@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,16 +38,27 @@ public class LoginActivity extends AppCompatActivity {
                 String email= mEmail.getText().toString().trim();
                 String  pass= mPassword.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)) {
-                    mEmail.setError("Email is required");
-                }
-                if(TextUtils.isEmpty(pass)) {
-                    mEmail.setError("Password is required");
-                }
-                if(pass.length()< 8) {
-                    mPassword.setError("Password must be 8 characters or more");
+                if (TextUtils.isEmpty(email)) {
+                    mEmail.setError("Email is required");   // if email or pass is emmty reset focus
+                    mEmail.requestFocus();
                     return;
                 }
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    mEmail.setError("Provide a valid email");
+                    mEmail.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(pass)) {
+                    mPassword.setError("Password is required");
+                    mPassword.requestFocus();
+                    return;
+                }
+                if (pass.length() < 6) { // pass length has to be 6 or more
+                    mPassword.setError("Password must be 9 characters or more");
+                    mPassword.requestFocus();
+                    return;}
+
+                fAuth=FirebaseAuth.getInstance();
                 fAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
