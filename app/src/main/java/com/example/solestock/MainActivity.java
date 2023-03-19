@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        InventoryView = findViewById(R.id.InventoryB);
 
        Add.setOnClickListener(this);
-
+       InventoryView.setOnClickListener(this);
 
 
 
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
         switch (view.getId()){
             case R.id.addb : i = new Intent(this,AddShoeActivity.class); startActivity(i); break;
+            case R.id.InventoryB : i = new Intent(this,viewCollectionActivity.class);  startActivity(i); break;
             default: break;
         }
 

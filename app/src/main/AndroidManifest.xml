@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoleStock">
         <activity
+            android:name=".viewCollectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteShoeActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddShoeActivity"
             android:exported="false" />
         <activity

@@ -52,8 +52,8 @@ public class AddShoeActivity extends AppCompatActivity {
         if(!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(cat)&&!TextUtils.isEmpty(value)){
 
             Sneakers shoes = new Sneakers(name,cat,value);
-            databaseReference.child(resultemail).child("Sneakers").setValue(shoes);
-            databaseReferencecat.child(resultemail).child("ItemByCategory").child(cat).child(name).setValue(shoes);
+            DatabaseReference newNodeReference =  databaseReference.child(resultemail).child("Sneakers").push();
+            newNodeReference.setValue(shoes);
             ShoeName.setText("");
             price.setText("");
             category.setText("");
