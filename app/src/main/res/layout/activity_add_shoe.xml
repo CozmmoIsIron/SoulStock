@@ -22,7 +22,7 @@
         android:id="@+id/shoeC"
         android:layout_width="376dp"
         android:layout_height="48dp"
-        android:hint="Shoe Category"
+        android:hint="Shoe Size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
@@ -44,15 +44,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="114dp"
-        android:layout_height="53dp"
+        android:layout_width="186dp"
+        android:layout_height="70dp"
         android:text="Add a Shoe"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ShoeN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.814" />
+        app:layout_constraintVertical_bias="0.806" />
 
     <Button
         android:id="@+id/AddShoeB"

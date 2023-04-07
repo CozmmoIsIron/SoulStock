@@ -19,9 +19,6 @@
             android:name=".AddShoeActivity"
             android:exported="false" />
         <activity
-            android:name=".InventoryActivity"
-            android:exported="false" />
-        <activity
             android:name=".Register"
             android:exported="true" />
         <activity

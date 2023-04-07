@@ -6,4 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".DeleteShoeActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete a Shoe"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/ShoeN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ShoeN"
+        android:layout_width="376dp"
+        android:layout_height="48dp"
+        android:hint="Shoe Name"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteShoeB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/DeleteShoeB"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="32dp"
+        android:text="DELETE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShoeN"
+        app:layout_constraintVertical_bias="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

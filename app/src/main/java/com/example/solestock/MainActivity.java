@@ -35,13 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userID= user.getUid();
         Add = findViewById(R.id.addb);
         Delete = findViewById(R.id.deleteButton);
-        Product =  findViewById(R.id.viewButton);
        InventoryView = findViewById(R.id.InventoryB);
-
        Add.setOnClickListener(this);
        InventoryView.setOnClickListener(this);
-
-
+       Delete.setOnClickListener(this);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -70,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.addb : i = new Intent(this,AddShoeActivity.class); startActivity(i); break;
             case R.id.InventoryB : i = new Intent(this,viewCollectionActivity.class);  startActivity(i); break;
+            case R.id.deleteButton:  i = new Intent(this,DeleteShoeActivity.class);  startActivity(i); break;
             default: break;
         }
 

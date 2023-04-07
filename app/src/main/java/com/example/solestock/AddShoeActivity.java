@@ -15,7 +15,7 @@ import android.view.View;
 import android.text.TextUtils;
 import android.widget.Toast;
 public class AddShoeActivity extends AppCompatActivity {
-    private EditText ShoeName, category, price;
+    private EditText ShoeName, size, price;
     private FirebaseAuth firebaseAuth;
     Button AddDatabase;
     DatabaseReference databaseReference;
@@ -30,7 +30,7 @@ public class AddShoeActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         databaseReferencecat = FirebaseDatabase.getInstance().getReference("Users");
         ShoeName = findViewById(R.id.ShoeN);
-        category = findViewById(R.id.shoeC);
+        size = findViewById(R.id.shoeC);
         price = findViewById(R.id.shoeP);
         AddDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,19 +44,19 @@ public class AddShoeActivity extends AppCompatActivity {
     }
     public void additem () {
         String name= ShoeName.getText().toString();
-        String cat = category.getText().toString();
+        String Size = size.getText().toString();
         String value = price.getText().toString();
         final FirebaseUser users = firebaseAuth.getCurrentUser();
         String finaluser = users.getEmail();
         String resultemail = finaluser.replace(".", ",");
-        if(!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(cat)&&!TextUtils.isEmpty(value)){
+        if(!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(Size)&&!TextUtils.isEmpty(value)){
 
-            Sneakers shoes = new Sneakers(name,cat,value);
+            Sneakers shoes = new Sneakers(name,Size,value);
             DatabaseReference newNodeReference =  databaseReference.child(resultemail).child("Sneakers").push();
             newNodeReference.setValue(shoes);
             ShoeName.setText("");
             price.setText("");
-            category.setText("");
+            size.setText("");
             Toast.makeText(AddShoeActivity.this,ShoeName+" Added",Toast.LENGTH_SHORT).show();
         }
         else{ Toast.makeText(AddShoeActivity.this,"Please Fill all the fields",Toast.LENGTH_SHORT).show();
